@@ -1,0 +1,48 @@
+barbados v1.0 Manual UI [Browse Shops]: Clearing search input does not restore full shop list
+
+[Summary]
+When a user clears the search input field on the Shops page, the full list of shops is not restored. Furthermore, the "Go" button becomes disabled (grayed out) when the text field is empty, which prevents the user from submitting an empty search to reset the view. This results in a failure for Step 2 of test case BRS-003.
+
+[Precondition]
+Software version: v1.0
+Software configuration: Default
+Hardware specifications: Web App
+Network configuration: N/A
+User has a valid customer account, is logged in successfully, and shops are already registered in the system database.
+
+[Steps to reproduce]
+
+    Navigate to the "Shops" tab on the home dashboard.
+
+    Enter a keyword in the search bar (e.g., "Coby's") and submit to filter the list.
+
+    Delete the text in the search input field to clear it.
+
+    Attempt to restore the full list of shops (either by clicking the now-disabled "Go" button or waiting for an auto-refresh).
+
+[Actual results]
+Search filtering works correctly initially, but the full list of shops is not restored when the input is cleared. The "Go" button is unhighlighted/disabled when the field is empty, meaning an empty search field cannot be submitted to clear the active filter.
+
+[Expected results]
+Clearing the search input should restore the full list of shops (either automatically upon clearing the text, or by allowing the user to click "Go" with an empty field to reset it), as defined in BRS-003.
+
+[Additional information]
+See attached screenshot ...
+
+[Is this Breakage?]
+No, missed from previous pass
+
+[Severity: How does this problem impact the customer/user?]
+2. Cosmetic issue / User is inconvenienced (User has to likely refresh the page or click the Shops tab again to reset the view)
+
+[Likelihood: How often will a customer/user use this feature/function?]
+8. High
+
+[Repeatability: Is this problem easily reproducible?]
+10. 100% Reproducible
+
+[Impacted Test Cases]
+BRS-003: Browse Shops Testing - Search by Name
+
+[Impact Sizing (in days)]
+Less than a day

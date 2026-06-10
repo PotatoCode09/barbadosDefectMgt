@@ -1,0 +1,50 @@
+barbados v1.0 Manual UI [Browse Shops]: Clearing invalid typo or spaces does not restore shop list
+
+[Summary]
+Similar to the issue found in BRS-003, when a user executes a negative path search (like submitting a typo such as "xyzqwbv" to trigger the empty state) and then clears the search input field to reset their view, the full list of shops is not restored. The "Go" button becomes disabled when the field is empty, trapping the user in the zero-results state and preventing recovery from an invalid search.
+
+[Precondition]
+Software version: v1.0
+Software configuration: Default
+Hardware specifications: Web App
+Network configuration: N/A
+Customer is on the search screen with shops registered in the database.
+
+[Steps to reproduce]
+
+    Navigate to the "Shops" tab on the home dashboard.
+
+    Enter a nonsensical typo (e.g., "xyzqwbv") into the search bar and submit.
+
+    Observe the system returning the expected "No shops found" empty data set.
+
+    Delete the typo text to clear the search input field.
+
+    Attempt to restore the default shop list or click the "Go" button with the empty field.
+
+[Actual results]
+While the system correctly rejects the invalid typo and shows the empty state initially, clearing the invalid text does not restore the full list of shops. Furthermore, the "Go" button becomes disabled (grayed out) when the field is empty, blocking the user from manually submitting an empty search to reset the catalog.
+
+[Expected results]
+After encountering an empty state from a typo or spaces, clearing the search bar should seamlessly restore the full list of available shops (either automatically or by allowing submission of an empty field) so the user can begin a new search without reloading the page.
+
+[Additional information]
+See attached screenshot...
+
+[Is this Breakage?]
+No, missed from previous pass
+
+[Severity: How does this problem impact the customer/user?]
+2. Cosmetic issue / User is inconvenienced (Forces a hard refresh to escape the empty state)
+
+[Likelihood: How often will a customer/user use this feature/function?]
+6. Moderate
+
+[Repeatability: Is this problem easily reproducible?]
+10. 100% Reproducible
+
+[Impacted Test Cases]
+BRS-012: Browse Shop Testing - Spaces and Typos
+
+[Impact Sizing (in days)]
+Less than a day

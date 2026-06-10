@@ -1,0 +1,48 @@
+barbados v1.0 Manual UI [Profile]: Missing basic profile details tab in profile modal
+
+[Summary]
+When a logged-in user clicks on the "Profile" button, the modal opens and displays tabs for "Addresses", "Security", and "Payments". However, there is no tab or section available to view or edit basic profile information (Name, Email, Contact Info). This completely blocks Step 2 and Step 3 of test case ACC-0002.
+
+[Precondition]
+Software version: v1.0
+Software configuration: Default
+Hardware specifications: N/A (Web App)
+Network configuration: N/A
+User has a valid account and is logged in successfully.
+
+[Steps to reproduce]
+
+    Log into the application and navigate to the home dashboard.
+
+    Click on the "Profile" button located in the top right corner.
+
+    Observe the available tabs and information displayed in the resulting modal.
+
+    Attempt to locate basic profile details (name, email) and edit/update options.
+
+[Actual results]
+The system displays a modal with tabs for "Addresses", "Security", and "Payments", but the core profile details are completely missing. The user cannot view their name/email or proceed to check for edit/update options.
+
+[Expected results]
+The system should display the user's profile details correctly as expected, matching the user's account records, and edit/update buttons should be visible and functional (as per ACC-0002 Scenario 1).
+
+[Additional information]
+See attached screenshot...
+
+[Is this Breakage?]
+No, missed from previous pass
+
+[Severity: How does this problem impact the customer/user?]
+8. Data loss / Required function is missing
+
+[Likelihood: How often will a customer/user use this feature/function?]
+8. High
+
+[Repeatability: Is this problem easily reproducible?]
+10. 100% Reproducible
+
+[Impacted Test Cases]
+ACC-0002: Account Access Testing - View profile details
+
+[Impact Sizing (in days)]
+Less than a day

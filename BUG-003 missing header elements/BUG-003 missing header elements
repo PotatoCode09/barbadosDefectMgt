@@ -1,0 +1,48 @@
+barbados v1.0 Manual UI [Store Catalog]: Missing banner image and operating hours in header section
+
+[Summary]
+When a user navigates to a store's catalog page (e.g., Totem's Store), the header section fails to render the store's banner image and completely omits the operating hours. This violates the expected layout and behavior outlined in Step 1 of test case BRS-007.
+
+[Precondition]
+Software version: v1.0
+Software configuration: Default
+Hardware specifications: Web App
+Network configuration: N/A
+Customer has successfully transitioned to a specific shop's store catalog page, and the shop has active items and categories configured in its merchant dashboard.
+
+[Steps to reproduce]
+
+    Log into a customer account and navigate to the Shops page.
+
+    Select a store (e.g., "Totem's Store") to enter its catalog page.
+
+    Observe the top header section of the storefront.
+
+    Verify the presence of the shop name, banner image, rating score, and operating hours.
+
+[Actual results]
+The shop name and food items load successfully, but the header displays a solid dark blue background instead of the merchant's banner image. Additionally, the store's operating hours are completely missing from the UI.
+
+[Expected results]
+The shop name, banner image, rating score, and operating hours should all display clearly in the header section, as defined in BRS-007 Scenario 1, Step 1.
+
+[Additional information]
+See attached screenshot...
+
+[Is this Breakage?]
+No, missed from previous pass
+
+[Severity: How does this problem impact the customer/user?]
+2. Cosmetic issue / User is inconvenienced (Missing hours could lead to confusion about store availability)
+
+[Likelihood: How often will a customer/user use this feature/function?]
+8. High
+
+[Repeatability: Is this problem easily reproducible?]
+10. 100% Reproducible
+
+[Impacted Test Cases]
+BRS-007: Browse Shop Testing - Verify store catalog page details
+
+[Impact Sizing (in days)]
+Less than a day
